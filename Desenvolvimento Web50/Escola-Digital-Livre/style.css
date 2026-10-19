@@ -1,0 +1,174 @@
+/*variaveis globais cores e demais elementos do site*/
+
+:root {
+    --color-primary: #4F46E5;  /*COR PRINCIPAL*/
+    --color-primary-dark: #4339ca;  /*versão escura*/
+    --color-text: #1e1b2e; /*cor do texto principal*/
+    --color-text-light: #6b7280; /*cor do texto secundário*/
+    --color-border: #e5e7eb; /*cor da borda*/
+    --color-bg: #fff;
+    --font-main: 'Inter', sans-serif; /*fonte*/
+}   
+/*reset basico remove os espaçamentos padrões do navegador*/
+*{
+    margin: 0; /*espaçamento externo*/
+    padding: 0; /*espaçamento interno*/
+    box-sizing: border-box; /*padding e border não aumentam o tamanho do elemento*/
+}
+
+body {
+    font-family: var(--font-main); /*tipo da fonte do projeto*/
+    
+} 
+/*header*/
+.header {
+    width: 100%;
+    background-color: var(--color-bg);
+    border-bottom: 1px solid var(--color-border); /* borda inferior*/
+    position: sticky; /*header "gruda" no topo ao rolar a pagina*/
+    top: 0;
+    z-index: 100; /* garante que o header fique acima de outros elementos no caso ficando fixo */
+}
+    .header-container {
+        max-width: 1200px; /* largura máxima do conteudo */
+        margin: 0 auto; /* centraliza o conteudo */
+        padding: 16px  24px; /* espaçamento interno do header */;
+        display: flex; /* organiza os elementos em linha */
+        align-items: center; /* alinha os elementos verticalmente */
+        justify-content: space-between; /* os coisos ficam nas pontas*/
+        gap: 24px; /* espaçamento entre os elementos */
+    }
+/*logo*/
+.logo {
+    display: flex; /* organiza os elementos em linha */
+    align-items: center; /* alinha os elementos verticalmente */
+    gap: 12px;
+    text-decoration: none;
+}
+
+.logo img {
+    width: 45px; /* largura da logo */
+    height: 45px; /* altura da logo */
+    object-fit: contain; /* garante que a imagem não distorça */
+}
+
+.logo-text {
+    display: flex; /* organiza os elementos em linha */
+    flex-direction: column; /* titulo em cima,subtitulo embaixo */
+}
+
+.logo-title {
+    font-size: 16px; /* tamanho da fonte do titulo */
+    font-weight: 700; /* negrito */
+    color: var(--color-text);
+}
+
+.logo-subtitle {
+    font-size: 12px; /* tamanho da fonte do subtitulo */
+    font-weight: 400; /* normal */
+    color: var(--color-text-light);
+}
+
+/* Navegação Menu */
+.main-nav {
+    display: flex; /* organiza os elementos em linha */
+    align-items: center; /* alinha os elementos verticalmente */
+    gap: 32px; /* espaçamento entre os elementos */
+}
+
+.nav-link {
+    text-decoration: none; /* remove o sublinhado */
+    font-size: 14px; /* tamanho da fonte */
+    font-weight: 500; /* peso da fonte */
+    color: var(--color-text); /* cor do texto */
+    transition: color 0.2s ease;/*muda a cor suavemente */
+}
+
+.nav-link:hover {
+    color: #bf05ee /* muda a cor do texto ao passar o mouse */
+}
+
+.nav-link.active {
+    color: #bf05ee; /* muda a cor do texto ao passar o mouse */
+    font-weight: 600; /* deixa o texto em negrito */
+}
+
+/*Ações header (busca + botão)*/
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.search-box {
+    position: relative; /* para posicionar o botão de busca */
+    display: flex;
+    align-items: center;
+}
+
+.search-box input {
+    font-family: var(--font-main);
+    width: 200px;
+    padding: 10px 40px 10px 16px; /* espaço estra a direita para caber o icone de pesquisa */
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    font-size: 14px;
+    outline: none; /* remove a borda azul do navegador*/
+}
+
+.search-box input:focus {
+    border-color: var(--color-primary); /* muda a cor da borda ao focar */
+}
+
+.search-box input::placeholder {
+    color: var(--color-text-light); /* cor do placeholder */
+}
+
+.search-icon {
+    position: absolute; /* para posicionar o icone de pesquisa */
+    right: 14px; /* distancia do icone da borda direita */
+    fill: var(--color-text-light); /* cor do icone */
+    pointer-events: none; /* para que o icone não interfira ou atrapalheno clique do input */
+}
+
+.btn-primary {
+    font-family: var(--font-main);
+    background-color: var(--color-primary); /* cor de fundo do botão */
+    color: #fff; /* cor do texto do botão */
+    border: none; /* remove a borda do botão */
+    padding: 10px 20px; /* espaçamento interno do botão */
+    border-radius: 8px; /* arredonda os cantos do botão */
+    font-size: 14px; /* tamanho da fonte do botão */
+    font-weight: 600;
+    cursor: pointer; /* muda o cursor para mostrar que e clicavel ao passar o mouse */
+    white-space: nowrap; /* evita que o texto quebre em várias linhas */ 
+}
+
+.btn-primary:hover {
+    background-color: var(--color-primary-dark); /* muda a cor de fundo do botão ao passar o mouse */
+}
+
+
+.hamburguer {
+    display: none; /* esconde o botão por padrão para pc */
+    font-size: 24px; /* tamanho do icone */
+    background: none; /* remove o fundo */
+    border: none; /* remove a borda */
+    cursor: pointer; /* muda o cursor para mostrar que e clicavel ao passar o mouse */
+    color: var(--color-text);
+}
+
+@media (max-width: 768px) {
+    .search-box {
+        display: none; /* esconde a barra de busca para mobile */
+    }
+
+    .main-nav {
+        display: none; /* esconde o menu para mobile */
+    }
+
+    .hamburguer {
+        display: flex; /* mostra o botão de menu para mobile */
+    }
+}
+

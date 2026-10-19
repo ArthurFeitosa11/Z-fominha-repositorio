@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<!-- Declara que este documento usa HTML5 -->
+<html lang="pt-BR">
+    <!-- Elemento raiz da pagina."pt-Br" define o idioma -->
+<head>
+    <!-- Informações de bastidores não aperecem diretamente na tela -->
+
+    <meta charset="UTF-8"> <!-- codificação de caracyeres, garante acentos corretos -->
+     
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- ativa a responsividade em dispositivos moveis-->
+
+   <title>Escola Digital Livre</title><!-- titulo exibido na aba do navegador-->
+
+<link rel="stylesheet" href="style.css">
+<!-- conecta o arquivo de estilos (CSS) -->
+
+</head>
+<body>
+    <h1>Desenvolvimento Web</h1>
+    
+    <!-- tudo que o user vê e interage fica aqui -->
+     <header class="header">
+        <!-- tag semantica que indica o cabeçalho da pagina -->
+
+        <div class="header-container"> <!-- container que agrupa e centraliza o conteudo do header -->
+
+            <a href="#" class="logo">
+            <!-- logo clicavel leva para home -->
+
+                  <img src="./assets/logo.png" alt="Logo Educação Digital Livre" width="60px"> 
+                  <!-- img adiciona imagem/ src caminho da imagem/ alt legenda da imagem--> 
+
+                  <span class="logo-text"> <!-- span coloca e nuda textos-->
+                    <span class="logo-title">Escola digital livre</span> </span>
+                </span>
+                
+                  </span>
+                  <p>isso e um paragrafo</p>
+            </a>
+            
+            <nav class="main-nav">
+                <!--tag semantica para o menu de navegação-->
+                <a href="./index.html" class="nav-link active">inicio</a>
+                <!-- o A e o link para navegação/href e o caminho da pagina/active destaca a pagina atual -->
+                <a href="./Cursos.html" class="nav-link">cursos</a>
+                <a href="#" class="nav-link">sobre</a>
+                <a href="#" class="nav-link">contatos</a>
+            </nav>
+
+            <div class="header-ations">
+                <!-- agrupa os botoes de busca e botao CTA -->
+                 <div class="search-box">
+                    <input type="text" placeholder="buscar cursos">
+                    <!-- imput campo de entrada/placeholder some assim que o usuario digita -->
+                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="25" height="25" viewBox="0 0 50 50">
+                            <path d="M 21 3 C 11.654545 3 4 10.654545 4 20 C 4 29.345455 11.654545 37 21 37 C 24.701287 37 28.127393 35.786719 30.927734 33.755859 L 44.085938 46.914062 L 46.914062 44.085938 L 33.875 31.046875 C 36.43682 28.068316 38 24.210207 38 20 C 38 10.654545 30.345455 3 21 3 z M 21 5 C 29.254545 5 36 11.745455 36 20 C 36 28.254545 29.254545 35 21 35 C 12.745455 35 6 28.254545 6 20 C 6 11.745455 12.745455 5 21 5 z"></path>
+                    </svg>
+
+                
+                 </div>
+                    
+
+                 <button class="btn-primary">começar agora</button>
+                 <!-- botões para ações na pagina -->
+            </div>
+            <!-- botão para abrir o menu hamburguer funciona so pra mobile-->
+            <button class="hamburguer" id="btn-menu">☰</button>
+        </div>
+     <header>
+
+        
+        <script src="js/script.js"></script>
+</body>
+</html>
